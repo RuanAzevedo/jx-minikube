@@ -14,7 +14,7 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
-    registry: 10.108.223.166
+    registry: 10.102.238.31
   environments:
   - key: dev
     owner: RuanAzevedo
