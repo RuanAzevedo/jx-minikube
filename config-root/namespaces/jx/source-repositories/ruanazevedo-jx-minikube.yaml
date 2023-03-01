@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: RuanAzevedo
+    provider: github
+    repository: jx-minikube
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: ruanazevedo-jx-minikube
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/RuanAzevedo/jx-minikube.git
+  org: RuanAzevedo
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-minikube
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/RuanAzevedo/jx-minikube

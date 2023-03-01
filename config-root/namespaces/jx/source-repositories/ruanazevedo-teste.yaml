@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: RuanAzevedo
+    provider: github
+    repository: teste
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: ruanazevedo-teste
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/RuanAzevedo/teste.git
+  org: RuanAzevedo
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: teste
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/RuanAzevedo/teste

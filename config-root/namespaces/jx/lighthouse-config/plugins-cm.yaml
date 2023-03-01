@@ -6,6 +6,14 @@ data:
       repos:
       - RuanAzevedo/jx-minikube
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - RuanAzevedo/jx-minikube
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - RuanAzevedo/teste
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +29,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      RuanAzevedo/teste:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +41,20 @@ data:
     plugins:
       RuanAzevedo/jx-minikube:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      RuanAzevedo/teste:
       - approve
       - assign
       - help
@@ -53,6 +80,14 @@ data:
     - repos:
       - RuanAzevedo/jx-minikube
       trusted_org: RuanAzevedo
+    - repos:
+      - RuanAzevedo/jx-minikube
+      trusted_org: RuanAzevedo
+    - repos:
+      - RuanAzevedo/teste
+      trusted_org: RuanAzevedo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
