@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: jx-minikube
+    - name: node-project
     - name: teste
     scheduler: in-repo
   slack:
